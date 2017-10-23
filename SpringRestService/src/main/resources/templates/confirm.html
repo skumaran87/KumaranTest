@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" />
+<h3> String State Area </h3>
+<style type="text/css">
+.welcomeFormDiv
+{
+font-family: Arial, Helvetica, sans-serif;
+font-size: medium;
+background: teal;
+color: #FFF;
+padding: 2px 6px;
+border-collapse: separate;
+border: 1px solid #000;
+}
+a{
+font-family: Arial, Helvetica, sans-serif;
+font-size: x-large;
+color: #FFF;
+}
+h3{
+font-family: Arial, Helvetica, sans-serif;
+font-size: x-large;
+background: inactiveborder;
+color: maroon; 
+padding: 10px 6px;
+}
+.label {
+     display: inline-block;
+  
+}
+</style>
+<script type="text/javascript" src="jquery-1.3.2.js"></script>
+    <script type="text/javascript">
+    $(function () {
+    /* 	
+    	var $notLoggedIn = $("#notLoggedIn"); 
+    	var $loggedIn = $("#loggedIn").hide(); 
+    	var $loggedInBody = $("#loggedInBody"); 
+    	var $response = $("#response"); 
+    	var $login = $("#login");  */
+
+    	
+    });
+    
+    </script>
+</head>
+<body>
+<div class="welcomeFormDiv">
+<p class="label">Welcome </p><p class="label" th:text="${name}"></p><p class="label"> user! </p>
+<br></br>
+<div><p class="label">state :  </p> <p class="label" th:text="${stateValue}"></p><br></br>
+<p class="label" th:text="${response}"></p><br></br>
+</div> 
+<form id="form2" method="POST"><br></br>
+Character : <input id="character" name="character" type="text" placeholder="a" required="required"/><br></br><br></br>
+Amount: <input id="amount" name="amount" type="text" placeholder="1" required="required"/><br></br><br></br>
+<input type = "submit" name = "addAction" value="Add State"/>
+<input type = "submit" name = "delAction" value="Delete State"/>
+</form>
+<form id="form3" method="POST"><br></br>
+<input type = "submit" name = "saveAction" value="Save State"/>
+</form>
+
+<form id="form1" method="GET"><br></br>
+<input type = "submit" name = "disAction" value="Display State"/><p class="label">  : </p><p class="label" th:text="${display}"></p><br></br>
+<input type = "submit" name = "sumAction" value="Display Sum"/><p class="label">  : </p><p class="label" th:text="${sum}"></p><br></br>
+<input type = "submit" name = "charAction" value="Display Char"/><p class="label">  : </p><p class="label" th:text="${char}"></p><br></br><br></br>
+<input type = "submit" name = "logout" value="Logout"/><br></br>
+ <a href="/welcome" style="float: right;">welcome</a> 
+</form>
+<br></br>
+</div>
+<br></br>
+</body>
+</html>
